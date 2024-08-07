@@ -1,3 +1,4 @@
+/* styles/globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -30,4 +31,47 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+@keyframes move-clouds {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.clouds {
+  width: 200%;
+  height: 30%;
+  background: url('https://i.imgur.com/5Ppf6TC.png') repeat-x;
+  background-size: auto 100%;
+  animation: move-clouds 150s linear infinite;
+  position: absolute;
+  top: 0;
+}
+
+.moon {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  width: 10%;
+  height: auto;
+}
+.tabs-container {
+  background-color: rgba(60, 30, 129, 0.5); /* Transparent purple background */
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-top: 2rem;
 }
